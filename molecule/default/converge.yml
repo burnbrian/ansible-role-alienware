@@ -1,0 +1,19 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: false
+
+  pre_tasks:
+    - name: Update APT cache
+      ansible.builtin.package:
+        update_cache: true
+        cache_valid_time: 3600 
+  
+  tasks:
+    - name: Alienware M16 Baseline
+      ansible.builtin.debug:
+        msg: "Alienware M16 Baseline"
+
+    - name: Alienware Baseline Role
+      ansible.builtin.import_role:
+        name: burnbrian.alienwarebaseline
