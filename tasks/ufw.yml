@@ -1,18 +1,18 @@
 ---
-- name: tasks | ufw.yml | install ufw with apt
+- name: Tasks | ufw.yml | install ufw with apt
   ansible.builtin.apt:
     name: 'ufw'
     state: 'present'
 
-- name: tasks | ufw.yml | enable ufw
+- name: Tasks | ufw.yml | enable ufw
   community.general.ufw:
     state: enabled
 
-- name: tasks | ufw.yml | set logging
+- name: Tasks | ufw.yml | set logging
   community.general.ufw:
     logging: 'on'
 
-- name: tasks | ufw.yml | block inbound
+- name: Tasks | ufw.yml | block inbound
   community.general.ufw:
     rule: deny
     log: true
