@@ -1,0 +1,10 @@
+---
+- name: Install and enable UFW (Uncomplicated Firewall) 
+  ansible.builtin.import_tasks:
+    file: ufw.yml
+  become: true
+
+- name: Disable unused services, e.g. bluetooth, cups
+  ansible.builtin.import_tasks:
+    file: services.yml
+  become: true

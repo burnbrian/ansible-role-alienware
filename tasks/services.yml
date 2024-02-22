@@ -1,0 +1,12 @@
+---
+- name: tasks | services.yml | disable services
+  ansible.builtin.service:
+    name: "{{ item }}"
+    enabled: false
+    state: stopped
+  become: true
+  ignore_errors: true
+  with_items:
+    - cups
+    - bluetooth
+

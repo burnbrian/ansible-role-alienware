@@ -1,0 +1,16 @@
+---
+dependencies: []
+galaxy_info:
+  role_name: alienwarebaseline
+  author: burnbrian
+  description: Alienware M16 Baseline
+  company: None
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.1
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+  galaxy_tags:
+    - security
+    - baseline
